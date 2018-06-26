@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row no-gutters ">
+            <div class="col-sm-2" style="background-color:#343a40;">
+                <div class="card" style="width: auto; margin:5%;">
+                    <img class="card-img-top" src="img/profile.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">João da Silva</h5>
+                        <p class="card-text">Setor: Redação
+                            <br> Cargo: Editor
+                            <br> Ramal: 1313</p>
+                        <a href="#" class="btn btn-dark">Atualizar</a>
+                    </div>
+                </div>
+                <ul class="navbar-nav" style="margin:5%;">
+                    <button type="button" class="btn btn-outline-light btn-block font-weight-bold">Block level button</button>
+                    <button type="button" class="btn btn-outline-light btn-block font-weight-bold">Block level button</button>
+                    <button type="button" class="btn btn-outline-light btn-block font-weight-bold">Block level button</button>
+                    <button type="button" class="btn btn-outline-light  btn-block font-weight-bold">Block level button</button>
+                    <button type="button" class="btn btn-outline-danger btn-block font-weight-bold">Sair</button>
+
+                </ul>
+            </div>
+            <div class="col-sm-10">
+                <nav class="navbar navbar-dark bg-dark" style="padding-left:0" ;>
+                    <div class="col-sm-6 d-flex justify-content-start">
+                        <form class="form-inline">
+                            <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width:500px;">
+                            <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                        </form>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <form class="form-inline">
+                            <input class="form-control form-control-sm" style="margin-right:7px;" type="date" value="2018-06-20" id="example-date-input">
+
+                            <input class="form-control form-control-sm" style="margin-right:7px;" type="date" value="2018-06-25" id="example-date-input">
+                            <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit">Filtrar</button>
+                            <div class="dropdown" style="padding-left: 20px;">
+                                <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Grupo
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Abertos</a>
+                                    <a class="dropdown-item" href="#">Finalizados</a>
+                                    <a class="dropdown-item" href="#">Todos</a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </nav>
+                <div class="col-12">
+                    <form>
+                        <div class="form-row-inline">
+                            <div class="col-6">
+                                <label>Título:</label>
+                                <input type="text" class="form-control" placeholder="Título">
+                            </div>
+                            <div class="col-6">
+                                <label>Problema:</label>
+                                <select class="custom-select" size="8">
+                                    <option selected>Desconheço</option>
+                                    <option value="1">Notebook</option>
+                                    <option value="2">Impressora</option>
+                                    <option value="3">Site bloquado</option>
+                                    <option value="4">5NEWS</option>
+                                    <option value="5">ERP</option>
+                                    <option value="6">IpMeeting</option>
+                                    <option value="7">Adobe</option>
+                                    <option value="8">Java</option>
+                                    <option value="9">Bancos</option>
+                                    <option value="10">Agências</option>
+                                    <option value="11">Teclado</option>
+                                    <option value="12">Mouse</option>
+                                    <option value="13">Internet</option>
+                                    <option value="14">Rede</option>
+                                    <option value="15">Monitor</option>
+                                </select>
+                            </div>
+                            <div class="col-6 form-group">
+                                <label for="exampleFormControlTextarea1">Descrição:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <div class="col-6">
+
+                                <script>
+                                    function bs_input_file() {
+                                        $(".input-file").before(
+                                            function() {
+                                                if (!$(this).prev().hasClass('input-ghost')) {
+                                                    var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
+                                                    element.attr("name", $(this).attr("name"));
+                                                    element.change(function() {
+                                                        element.next(element).find('input').val((element.val()).split('\\').pop());
+                                                    });
+                                                    $(this).find("button.btn-choose").click(function() {
+                                                        element.click();
+                                                    });
+                                                    $(this).find("button.btn-reset").click(function() {
+                                                        element.val(null);
+                                                        $(this).parents(".input-file").find('input').val('');
+                                                    });
+                                                    $(this).find('input').css("cursor", "pointer");
+                                                    $(this).find('input').mousedown(function() {
+                                                        $(this).parents('.input-file').prev().click();
+                                                        return false;
+                                                    });
+                                                    return element;
+                                                }
+                                            }
+                                        );
+                                    }
+                                    $(function() {
+                                        bs_input_file();
+                                    });
+                                </script>
+                                <div class="form-group">
+                                    <div class="input-group input-file" name="Fichier1">
+                                        <span class="input-group-btn">
+                                                            <button class="btn btn-default btn-choose" type="button">Arquivo</button>
+                                                        </span>
+                                        <input type="text" class="form-control" placeholder='Escolha um arquivo...' />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="exampleFormControlTextarea1">Incidente:</label>
+                                <select class="form-control">
+
+                                    <option>Normal</option>
+                                    <option>Urgente</option>
+                                </select>
+
+                            </div>
+                            <br>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-dark">Enviar</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
