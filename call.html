@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <title>Bootstrap Example</title>
@@ -19,6 +19,9 @@
 
         <div class="row no-gutters ">
             <div class="col-sm-2" style="background-color:#343a40;">
+                    <ul class="navbar-nav" style="margin-left:5%;margin-right:5%;margin-top:3%;">
+                            <button type="button" class="btn btn-outline-light btn-block font-weight-bold" style="background-color: #007bff;"><a href="call.html" style="color:inherit">Novo Chamado</a></button>
+                                </ul>
                 <div class="card" style="width: auto; margin:5%;">
                     <img class="card-img-top" src="img/profile.jpg" alt="Card image cap">
                     <div class="card-body">
@@ -30,11 +33,12 @@
                     </div>
                 </div>
                 <ul class="navbar-nav" style="margin:5%;">
-                    <button type="button" class="btn btn-outline-light btn-block font-weight-bold">Block level button</button>
-                    <button type="button" class="btn btn-outline-light btn-block font-weight-bold">Block level button</button>
-                    <button type="button" class="btn btn-outline-light btn-block font-weight-bold">Block level button</button>
-                    <button type="button" class="btn btn-outline-light  btn-block font-weight-bold">Block level button</button>
-                    <button type="button" class="btn btn-outline-danger btn-block font-weight-bold">Sair</button>
+                        <button type="button" class="btn btn-outline-light btn-block font-weight-bold"><a href="home.html" style="color:inherit">Home</a></button>
+                        <button type="button" class="btn btn-outline-light btn-block font-weight-bold"><a href="dashboard.html" style="color:inherit">Chamados</a></button>
+                        <button type="button" class="btn btn-outline-light btn-block font-weight-bold">Block level button</button>
+                        <button type="button" class="btn btn-outline-light  btn-block font-weight-bold">Block level button</button>
+                        <button type="button" class="btn btn-outline-danger btn-block font-weight-bold">Sair</button>
+    
 
                 </ul>
             </div>
@@ -49,20 +53,21 @@
                     </div>
                     <div class="col-sm-6">
                         <form class="form-inline">
+                                <div class="dropdown" style="padding-right: 7px;">
+                                        <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Grupo
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Abertos</a>
+                                            <a class="dropdown-item" href="#">Finalizados</a>
+                                            <a class="dropdown-item" href="#">Todos</a>
+                                        </div>
+                                    </div>
                             <input class="form-control form-control-sm" style="margin-right:7px;" type="date" value="2018-06-20" id="example-date-input">
 
                             <input class="form-control form-control-sm" style="margin-right:7px;" type="date" value="2018-06-25" id="example-date-input">
                             <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit">Filtrar</button>
-                            <div class="dropdown" style="padding-left: 20px;">
-                                <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Grupo
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Abertos</a>
-                                    <a class="dropdown-item" href="#">Finalizados</a>
-                                    <a class="dropdown-item" href="#">Todos</a>
-                                </div>
-                            </div>
+     
                         </form>
 
                     </div>
